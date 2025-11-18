@@ -16,16 +16,17 @@ sudo DEBIAN_FRONTEND=noninteractive NEEDRESTART_SUSPEND=1 apt autoremove -y
 
 wget https://github.com/xdp-project/xdp-tools/releases/download/v1.5.5/xdp-tools-1.5.5.tar.gz
 tar -zxf xdp-tools-1.5.5.tar.gz
+pushd . > /dev/null
 cd xdp-tools-1.5.5
 ./configure
 make -j && sudo make install
-cd ..
+popd > /dev/null
 
-pwd
+pushd . > /dev/null
 cd xdp-tools/1.5.5/lib/libbpf/src
 make -j && sudo make install
 sudo ldconfig
-cd ../../../../
+popd > /dev/null
 
 # IMPORTANT: if we are not running a 6.5 kernel, upgrade the kernel. we need ubuntu 22.04 LTS with linux kernel 6.5 for xdp relay to work
 
@@ -58,8 +59,6 @@ sudo NEEDRESTART_SUSPEND=1 apt install dwarves linux-headers-`uname -r` linux-to
 sudo cp /sys/kernel/btf/vmlinux /usr/lib/modules/`uname -r`/build/
 
 # install proton module
-
-pwd
 
 make
 sudo mkdir -p /lib/modules/`uname -r`/kernel/net/proton
