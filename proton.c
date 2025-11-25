@@ -1,7 +1,7 @@
 /*
     Proton Linux kernel module
 
-    Tested on Ubuntu 22.04 LTS and Ubuntu 24.04 LTS
+    Tested on Ubuntu 24.04 LTS
 
     Licensed under the GNU General Public License 3.0
 
