@@ -114,7 +114,7 @@ static int __init proton_init( void )
     int result = register_btf_kfunc_id_set( BPF_PROG_TYPE_XDP, &bpf_task_kfunc_set );
     if ( result != 0 )
     {
-        pr_err( "failed to register proton kernel module kfuncs\n" );
+        pr_err( "failed to register proton kernel module kfuncs: %d\n", result );
         return -1;
     }
 
