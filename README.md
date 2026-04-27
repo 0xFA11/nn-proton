@@ -2,7 +2,7 @@
 
 # proton
 
-Proton is a linux kernel module based on [libhydrogen](https://github.com/jedisct1/libhydrogen) that provides crypto functions you can call from XDP programs.
+Proton is a linux kernel module based on [libhydrogen](https://github.com/jedisct1/libhydrogen) that provides crypto functions callable from XDP programs.
 
 I created it because I needed to write XDP programs on Linux that do cryptography compatible with userspace programs running on arbitrary platforms.
 
