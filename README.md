@@ -6,7 +6,7 @@ Proton is a linux kernel module based on [libhydrogen](https://github.com/jedisc
 
 # Why?
 
-I created it because I needed to write XDP programs on Linux that do cryptography compatible with userspace programs running on arbitrary platforms.
+I needed to write XDP programs on Linux that do cryptography compatible with userspace programs running on arbitrary platforms (PC, Mac, Linux, game consoles etc...)
 
 I considered using Linux cryptographic functions directly, but then I had the problem of working out, OK, but where do I get implementations for these functions across all client platforms that I support? I did not want to burden the user of my client-side libraries with installing huge dependencies like libcurl or mbedtls, just to get access to basic cryptographic functions.
 
